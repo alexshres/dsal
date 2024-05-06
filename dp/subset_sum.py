@@ -1,7 +1,7 @@
 import numpy as np
 
 def subset_sum(n, weight, mat, weight_list):
-    for i in range(1, n+1):
+    for i in range(1, n):
         for w in range (0, w+1):
             not_include = mat[i-1, w]
             include_weight = w - weight_list[i]
@@ -22,7 +22,7 @@ def main:
     # weight we want to test against
     cols = 25
 
-    matrix = np.zeros((rows, cols))     
+    matrix = np.zeros((rows, cols+1))     
     
     # test weight arr
     weight_list = [5, 8, 1, 4, 2, 4, 3, 1, 7, 9]
